@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#17104a">
+<title>Ponto Braz | Loja Digital</title>
+<style>
+:root{--bg:#090b1b;--panel:#141832;--panel2:#1b2145;--purple:#8b5cf6;--blue:#22d3ee;--text:#f7f7ff;--muted:#aeb5d4;--line:#30375f}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 15% 0,#292064 0,transparent 36%),linear-gradient(160deg,#080a18,#101735 55%,#080a18);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+header{position:sticky;top:0;z-index:5;background:#0b0d20ed;backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.wrap{max-width:1100px;margin:auto;padding:16px}
+.top{display:flex;align-items:center;justify-content:space-between;gap:12px}.brand{display:flex;align-items:center;gap:10px;font-weight:900;font-size:1.35rem;letter-spacing:.2px}.logo{width:42px;height:42px;border-radius:14px;background:linear-gradient(135deg,var(--purple),var(--blue));display:grid;place-items:center;font-size:22px;box-shadow:0 8px 28px #5b47dc66}
+.tag{color:#d7d8ff;font-size:.78rem}.cart{border:1px solid #5e5b9c;background:#211d52;color:white;border-radius:12px;padding:10px 14px;font-weight:700}
+.hero{padding:34px 0 24px;display:grid;grid-template-columns:1.4fr .8fr;gap:20px;align-items:center}.heroBox{padding:28px;border:1px solid #45417e;border-radius:24px;background:linear-gradient(135deg,#21164e,#14264e);box-shadow:0 20px 60px #0005}.eyebrow{color:#80eaff;text-transform:uppercase;letter-spacing:2px;font-size:.75rem;font-weight:800}h1{font-size:clamp(2rem,5vw,3.4rem);line-height:1.04;margin:12px 0}h1 span{background:linear-gradient(90deg,#c4a7ff,#55e7ff);-webkit-background-clip:text;color:transparent}.hero p{color:#d0d4f3;line-height:1.6}.heroArt{min-height:190px;border-radius:24px;background:linear-gradient(145deg,#4829a2,#126c9e);display:grid;place-items:center;font-size:5rem;box-shadow:inset 0 0 45px #fff2}
+.searchrow{display:flex;gap:10px;margin:14px 0 18px}.searchrow input{flex:1;min-width:0;background:#111630;border:1px solid var(--line);border-radius:12px;padding:13px 15px;color:white;font-size:1rem}.chips{display:flex;gap:8px;overflow:auto;padding-bottom:8px}.chip{white-space:nowrap;border:1px solid #444b79;background:#151a37;color:#dce2ff;padding:9px 13px;border-radius:999px;cursor:pointer}.chip.active{background:linear-gradient(90deg,#7046d7,#087eae);border-color:transparent;color:white}
+.sectionhead{display:flex;justify-content:space-between;align-items:end;gap:12px;margin:24px 0 14px}.sectionhead h2{margin:0;font-size:1.35rem}.muted{color:var(--muted);font-size:.9rem}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.product{border:1px solid var(--line);border-radius:18px;background:linear-gradient(160deg,#171d3c,#10152b);padding:16px;display:flex;flex-direction:column;min-height:210px}.emoji{width:48px;height:48px;border-radius:14px;background:#29245d;display:grid;place-items:center;font-size:1.6rem}.product h3{margin:12px 0 5px}.product p{margin:0 0 14px;color:var(--muted);font-size:.9rem;line-height:1.45;flex:1}.price{font-weight:900;font-size:1.15rem;color:#8eeaff;margin-bottom:12px}.buy{border:0;border-radius:12px;padding:12px;background:linear-gradient(90deg,#7849dc,#078cb9);color:white;font-weight:800;cursor:pointer}
+.info{margin:28px 0;padding:20px;border:1px solid var(--line);border-radius:18px;background:#111831}.info h2{margin-top:0}.info p{color:var(--muted);line-height:1.6}.footer{text-align:center;color:#9da6c9;padding:22px 10px 35px;font-size:.85rem}
+.modal{display:none;position:fixed;inset:0;background:#000b;z-index:10;align-items:center;justify-content:center;padding:18px}.modal.show{display:flex}.modalbox{max-width:440px;width:100%;background:#151a36;border:1px solid #53558c;border-radius:20px;padding:22px}.modalbox h2{margin-top:0}.modalbox label{display:block;margin:12px 0 6px;color:#d5daf8}.modalbox input{width:100%;padding:12px;border-radius:10px;border:1px solid #485078;background:#0d1229;color:white}.modalactions{display:flex;gap:9px;margin-top:16px}.modalactions button{flex:1}.secondary{background:#2a3155!important}.pix{padding:12px;background:#0b1128;border:1px dashed #6a70a8;border-radius:10px;word-break:break-all;margin:10px 0}
+@media(max-width:720px){.hero{grid-template-columns:1fr}.heroArt{min-height:125px;font-size:3.5rem}.grid{grid-template-columns:repeat(2,1fr)}.wrap{padding:13px}.heroBox{padding:22px}}
+@media(max-width:430px){.grid{grid-template-columns:1fr}.brand{font-size:1.1rem}}
+</style>
+</head>
+<body>
+<header><div class="wrap top"><div><div class="brand"><div class="logo">🛒</div><div>PONTO <span style="color:#6ce6ff">BRAZ</span><div class="tag">Sua loja digital</div></div></div></div><button class="cart" onclick="document.getElementById('catalogo').scrollIntoView({behavior:'smooth'})">Ver produtos ↓</button></div></header>
+<main class="wrap">
+<section class="hero"><div class="heroBox"><div class="eyebrow">Bem-vindo à Ponto Braz</div><h1>Seu mundo digital<br><span>em um só lugar.</span></h1><p>Explore produtos e serviços digitais. Escolha o que procura e fale com nossa equipe para concluir seu pedido com segurança.</p><button class="buy" onclick="document.getElementById('catalogo').scrollIntoView({behavior:'smooth'})">Explorar catálogo</button></div><div class="heroArt">✨📱🎮</div></section>
+<section id="catalogo"><div class="sectionhead"><div><h2>Catálogo digital</h2><div class="muted">Selecione uma categoria ou pesquise.</div></div></div>
+<div class="searchrow"><input id="search" type="search" placeholder="Buscar produto..." oninput="render()"></div>
+<div class="chips" id="chips"></div><div class="grid" id="products"></div></section>
+<section class="info"><h2>Como comprar</h2><p>1. Escolha um item do catálogo. 2. Informe seu e-mail no pedido. 3. Nossa equipe confirma disponibilidade, valor e forma de pagamento. 4. O envio é realizado após a confirmação do pagamento e da disponibilidade do produto.</p><p><strong>Segurança:</strong> não envie senhas. Produtos digitais devem ser legítimos e fornecidos por canais autorizados.</p></section>
+</main>
+<footer class="footer">© <span id="year"></span> Ponto Braz · Loja Digital</footer>
+<div class="modal" id="modal"><div class="modalbox"><h2>Solicitar pedido</h2><div id="chosen" class="muted"></div><label for="email">Seu e-mail</label><input id="email" type="email" placeholder="voce@email.com"><label for="name">Seu nome (opcional)</label><input id="name" type="text" placeholder="Como podemos chamar você?"><div class="modalactions"><button class="buy" onclick="sendOrder()">Enviar pedido</button><button class="buy secondary" onclick="closeModal()">Fechar</button></div><p class="muted">O pedido será enviado pelo WhatsApp para confirmar os detalhes. Nenhum pagamento é confirmado automaticamente nesta versão.</p></div></div>
+<script>
+const items=[
+ {name:"Cartões-presente",cat:"Games",emoji:"🎮",desc:"Créditos e cartões digitais de lojas e jogos, conforme disponibilidade.",price:"Consultar"},
+ {name:"E-books",cat:"Cursos e e-books",emoji:"📚",desc:"Materiais digitais e conteúdos com licença de distribuição.",price:"Consultar"},
+ {name:"Cursos digitais",cat:"Cursos e e-books",emoji:"🎓",desc:"Cursos e materiais autorizados para revenda.",price:"Consultar"},
+ {name:"Artes para redes sociais",cat:"Redes sociais",emoji:"📱",desc:"Criação de artes, capas e materiais para seus perfis.",price:"Consultar"},
+ {name:"Ferramentas digitais",cat:"Utilidades",emoji:"🧰",desc:"Serviços e ferramentas digitais disponíveis sob consulta.",price:"Consultar"},
+ {name:"Atendimento VIP",cat:"VIP",emoji:"👑",desc:"Atendimento prioritário para tirar dúvidas e consultar ofertas.",price:"Consultar"}
+];
+const cats=["Todos",...new Set(items.map(x=>x.cat))];let active="Todos",selected=null;
+function renderChips(){document.getElementById("chips").innerHTML=cats.map(c=>`<button class="chip ${c===active?'active':''}" onclick="active=${JSON.stringify(c)};renderChips();render()">${c}</button>`).join("")}
+function render(){const q=document.getElementById("search").value.toLowerCase();const filtered=items.filter(x=>(active==="Todos"||x.cat===active)&&(x.name+" "+x.desc+" "+x.cat).toLowerCase().includes(q));document.getElementById("products").innerHTML=filtered.map((x)=>`<article class="product"><div class="emoji">${x.emoji}</div><h3>${x.name}</h3><p>${x.desc}</p><div class="price">${x.price}</div><button class="buy" onclick="openModal('${x.name.replace(/'/g,"\\'")}')">Tenho interesse</button></article>`).join("")||'<p class="muted">Nenhum item encontrado.</p>'}
+function openModal(name){selected=name;document.getElementById("chosen").textContent="Produto: "+name;document.getElementById("modal").classList.add("show")}
+function closeModal(){document.getElementById("modal").classList.remove("show")}
+function sendOrder(){const email=document.getElementById("email").value.trim(),name=document.getElementById("name").value.trim();if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){alert("Informe um e-mail válido.");return}const msg=`Olá! Tenho interesse em: ${selected}. Nome: ${name||"Não informado"}. E-mail: ${email}. Gostaria de confirmar disponibilidade e pagamento.`;window.open("https://wa.me/?text="+encodeURIComponent(msg),"_blank")}
+document.getElementById("year").textContent=new Date().getFullYear();renderChips();render();
+</script>
+</body></html>
