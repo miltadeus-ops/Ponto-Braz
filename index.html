@@ -1,120 +1,27 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#08051b">
-<title>Ponto Braz | Sua loja digital</title>
-<meta name="description" content="Ponto Braz — sua loja digital de tecnologia, jogos e produtos digitais.">
-<style>
-:root{--bg:#08051b;--panel:#100b2b;--panel2:#171039;--purple:#8b35ff;--blue:#08b9ff;--text:#f7f5ff;--muted:#b8b1d4;--line:#30245b;--glow:0 0 28px #762dff35}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 15% 0%,#25105a 0,transparent 35%),radial-gradient(ellipse at 100% 15%,#062e59 0,transparent 30%),var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
-a{color:inherit;text-decoration:none}button,input{font:inherit}.wrap{width:min(1180px,calc(100% - 36px));margin:auto}
-.topline{background:#070414;border-bottom:1px solid #211743;color:#c9c2e6;text-align:center;padding:9px 12px;font-size:12px;letter-spacing:.3px}
-header{position:sticky;top:0;z-index:20;background:#09051beF;backdrop-filter:blur(18px);border-bottom:1px solid #2a2050}
-.nav{height:76px;display:flex;align-items:center;gap:22px}.brand{display:flex;align-items:center;gap:10px;font-weight:950;font-size:23px;letter-spacing:-1px;white-space:nowrap}.brand-mark{width:39px;height:39px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg,var(--purple),var(--blue));box-shadow:0 0 24px #793dff66;font-size:20px}.brand b{background:linear-gradient(90deg,#fff,#bba1ff 50%,#36d5ff);-webkit-background-clip:text;color:transparent}
-.search{flex:1;position:relative}.search input{width:100%;background:#15102e;border:1px solid #35265e;border-radius:13px;padding:13px 16px 13px 42px;color:white;outline:none}.search input:focus{border-color:#8b48ff;box-shadow:var(--glow)}.search span{position:absolute;left:14px;top:11px;font-size:17px;color:#aaa}
-.nav-actions{display:flex;align-items:center;gap:10px}.pillbtn{border:1px solid #47336f;background:#17102f;color:#fff;border-radius:12px;padding:11px 14px;cursor:pointer;font-weight:750}.pillbtn:hover{border-color:var(--blue);transform:translateY(-1px)}.cart-count{display:inline-grid;place-items:center;background:linear-gradient(135deg,var(--purple),var(--blue));border-radius:20px;min-width:21px;height:21px;margin-left:5px;font-size:11px}
-.catbar{border-top:1px solid #211943}.cats{display:flex;gap:8px;overflow:auto;padding:11px 0;scrollbar-width:none}.cats::-webkit-scrollbar{display:none}.cat{white-space:nowrap;border:1px solid transparent;border-radius:20px;padding:8px 13px;color:#c9c3df;font-size:12px;font-weight:800;background:transparent;cursor:pointer}.cat.active,.cat:hover{background:#28134c;border-color:#7440be;color:#fff}
-.hero{padding:30px 0 22px}.hero-box{position:relative;overflow:hidden;min-height:320px;border:1px solid #4b2b86;border-radius:25px;background:linear-gradient(110deg,#18083c 0%,#0b1741 58%,#07152c 100%);box-shadow:var(--glow);display:grid;grid-template-columns:1.1fr .9fr;align-items:center;padding:42px 48px}.hero-box:before,.hero-box:after{content:"";position:absolute;border-radius:50%;filter:blur(2px);pointer-events:none}.hero-box:before{width:340px;height:340px;background:#812eff3b;right:16%;top:-180px}.hero-box:after{width:280px;height:280px;background:#00bfff2a;right:-50px;bottom:-180px}
-.eyebrow{display:inline-flex;align-items:center;gap:8px;color:#5cddff;font-size:11px;font-weight:900;letter-spacing:2px;text-transform:uppercase}.dot{width:7px;height:7px;border-radius:50%;background:#20d9ff;box-shadow:0 0 12px #20d9ff}
-h1{font-size:clamp(34px,5vw,58px);line-height:1.02;letter-spacing:-2px;margin:15px 0}.gradient{background:linear-gradient(90deg,#fff 5%,#b98cff 48%,#26d7ff);-webkit-background-clip:text;color:transparent}.hero p{max-width:540px;color:#c8c1df;line-height:1.65;margin:0 0 22px}.actions{display:flex;gap:12px;flex-wrap:wrap}.primary{background:linear-gradient(100deg,#8a2fff,#087dff);border:0;color:white;border-radius:12px;padding:13px 19px;font-weight:900;cursor:pointer;box-shadow:0 8px 24px #5726bf55}.secondary{border:1px solid #66508e;background:#17102f;color:white;border-radius:12px;padding:13px 19px;font-weight:850;cursor:pointer}
-.hero-art{position:relative;z-index:1;display:grid;place-items:center;min-height:220px}.orb{width:210px;height:210px;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle at 35% 25%,#4730a0,#11102e 60%,#071b3b);border:1px solid #6d51be;box-shadow:0 0 65px #6c2dff66,inset 0 0 40px #05bfff35;font-size:100px;transform:rotate(-8deg)}.float{position:absolute;padding:12px 15px;background:#120b2edb;border:1px solid #4b347d;border-radius:14px;box-shadow:var(--glow);font-size:24px}.f1{top:15px;left:2%}.f2{right:3%;top:35px}.f3{bottom:8px;left:12%}.f4{right:8%;bottom:12px}
-.trust{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:4px 0 32px}.trust-item{display:flex;gap:11px;align-items:center;background:#100b27;border:1px solid #2b2050;border-radius:14px;padding:14px}.trust-icon{font-size:23px}.trust-item strong{display:block;font-size:12px}.trust-item small{color:var(--muted);font-size:10px}
-section{padding:23px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:15px;margin-bottom:17px}.kicker{font-size:10px;letter-spacing:2px;color:#5ad8ff;font-weight:900;text-transform:uppercase}.section-head h2{font-size:25px;letter-spacing:-.7px;margin:5px 0 0}.muted{color:var(--muted);font-size:13px}.textlink{color:#6adfff;font-size:12px;font-weight:850}
-.category-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}.category-card{min-height:120px;border:1px solid #34265d;border-radius:16px;padding:17px;background:linear-gradient(145deg,#1b1040,#0e0b25);transition:.2s;cursor:pointer}.category-card:hover{transform:translateY(-4px);border-color:#8a49ed;box-shadow:var(--glow)}.category-card .emoji{font-size:27px}.category-card strong{display:block;margin-top:13px;font-size:13px}.category-card small{color:#aaa1cb;font-size:10px}
-.feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.feature{border:1px solid #35245e;border-radius:18px;overflow:hidden;background:#100b28}.feature-art{height:145px;display:grid;place-items:center;font-size:55px;background:radial-gradient(circle at 50% 45%,#4d2290,#17103a 58%,#0b1027)}.feature:nth-child(2) .feature-art{background:radial-gradient(circle,#075b9c,#15103a 65%)}.feature:nth-child(3) .feature-art{background:radial-gradient(circle,#63227f,#17103a 65%)}.feature-body{padding:16px}.feature-body small{color:#66d9ff;font-weight:850;font-size:10px;text-transform:uppercase;letter-spacing:1px}.feature-body h3{margin:7px 0;font-size:16px}.feature-body p{margin:0;color:var(--muted);font-size:12px;line-height:1.5}
-.combo{border:1px solid #54358d;border-radius:22px;background:linear-gradient(110deg,#21104a,#0b2042);padding:25px;display:grid;grid-template-columns:1fr auto;align-items:center;gap:20px}.combo h2{font-size:25px;margin:7px 0}.combo p{color:#c8c1df;font-size:13px;line-height:1.5;margin:0}.combo-mark{font-size:64px}
-.how-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}.how{background:#100b27;border:1px solid #2c2051;border-radius:15px;padding:18px}.how b{font-size:23px}.how h3{font-size:14px;margin:10px 0 5px}.how p{font-size:12px;color:var(--muted);line-height:1.5;margin:0}
-.review-empty{border:1px dashed #514075;border-radius:17px;padding:26px;text-align:center;color:#c5bddf;background:#100b27}.review-empty strong{display:block;margin-bottom:6px;color:white}
-footer{margin-top:35px;border-top:1px solid #2b2050;background:#080516;padding:32px 0 22px}.foot{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:25px}.foot p,.foot a{color:#aaa2c8;font-size:12px;line-height:1.8}.foot h4{font-size:13px;margin:0 0 10px}.footlinks{display:grid;gap:5px}.copyright{border-top:1px solid #241a43;margin-top:22px;padding-top:16px;color:#766e91;font-size:10px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
-.drawer-backdrop{position:fixed;inset:0;background:#0009;z-index:40;display:none}.drawer{position:fixed;z-index:41;right:0;top:0;height:100dvh;width:min(410px,100%);background:#100b27;border-left:1px solid #46316f;padding:22px;transform:translateX(105%);transition:.25s;display:flex;flex-direction:column}.drawer.open{transform:translateX(0)}.drawer-backdrop.open{display:block}.drawer-head{display:flex;justify-content:space-between;align-items:center}.drawer-head h3{margin:0}.close{background:#25183f;border:1px solid #49366f;color:white;border-radius:10px;padding:8px 11px;cursor:pointer}.cart-items{overflow:auto;flex:1;margin:18px 0}.cart-line{display:flex;justify-content:space-between;gap:12px;border-bottom:1px solid #30234f;padding:12px 0;font-size:13px}.cart-line button{background:none;border:0;color:#ff9cbd;cursor:pointer}.cart-total{border-top:1px solid #40305f;padding-top:15px}.cart-total strong{font-size:18px}.cart-total p{font-size:11px;color:var(--muted);line-height:1.5}.toast{position:fixed;bottom:20px;left:50%;transform:translate(-50%,20px);opacity:0;z-index:60;background:#211548;border:1px solid #6847a2;border-radius:12px;padding:12px 16px;font-size:13px;transition:.2s;pointer-events:none}.toast.show{opacity:1;transform:translate(-50%,0)}
-@media(max-width:850px){.nav{height:auto;min-height:68px;flex-wrap:wrap;padding:12px 0}.search{order:3;flex-basis:100%}.nav-actions{margin-left:auto}.hero-box{grid-template-columns:1fr;padding:30px 25px}.hero-art{display:none}.trust{grid-template-columns:repeat(2,1fr)}.category-grid{grid-template-columns:repeat(3,1fr)}}
-@media(max-width:560px){.wrap{width:min(100% - 24px,1180px)}.brand{font-size:20px}.pillbtn{padding:9px 10px;font-size:12px}.hero{padding-top:16px}.hero-box{min-height:290px;padding:25px 21px;border-radius:18px}h1{font-size:39px}.hero p{font-size:13px}.trust{gap:8px}.trust-item{padding:11px}.trust-item strong{font-size:11px}.category-grid{grid-template-columns:repeat(2,1fr);gap:9px}.category-card{min-height:105px;padding:13px}.feature-grid{grid-template-columns:1fr}.feature-art{height:120px}.section-head h2{font-size:21px}.combo{grid-template-columns:1fr;padding:20px}.combo-mark{display:none}.how-grid{grid-template-columns:1fr}.foot{grid-template-columns:1fr 1fr}.foot>div:first-child{grid-column:1/-1}}
-</style>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#080b2a"><meta name="description" content="Ponto Braz — sua loja digital.">
+<title>Ponto Braz | Loja Digital</title>
+<link rel="stylesheet" href="/style.css">
 </head>
 <body>
-<div class="topline">✨ PONTO BRAZ • SUA LOJA DIGITAL • TECNOLOGIA, JOGOS E MUITO MAIS</div>
-<header>
- <div class="wrap nav">
-  <a class="brand" href="#"><span class="brand-mark">🛒</span><span><b>PONTO BRAZ</b></span></a>
-  <label class="search"><span>⌕</span><input id="search" type="search" placeholder="Buscar categorias e produtos..." aria-label="Buscar"></label>
-  <div class="nav-actions"><a class="pillbtn" href="#suporte">Suporte</a><button class="pillbtn" id="openCart">🛍 Carrinho <span class="cart-count" id="cartCount">0</span></button></div>
- </div>
- <div class="catbar"><nav class="wrap cats" id="catNav">
-  <button class="cat active" data-cat="Todas">Todas</button><button class="cat" data-cat="IA's">IA'S</button><button class="cat" data-cat="Edição">EDIÇÃO</button><button class="cat" data-cat="Assinaturas">ASSINATURAS</button><button class="cat" data-cat="Steam">PRODUTOS STEAM</button><button class="cat" data-cat="Jogos">CONTAS / JOGOS</button><button class="cat" data-cat="Utilidades">UTILIDADES</button><button class="cat" data-cat="Packs">PACKS</button>
- </nav></div>
-</header>
-<main class="wrap">
- <section class="hero">
-  <div class="hero-box">
-   <div><span class="eyebrow"><i class="dot"></i> BEM-VINDO À PONTO BRAZ</span>
-    <h1>Sua próxima experiência <span class="gradient">começa aqui.</span></h1>
-    <p>Tecnologia, jogos e produtos digitais em um só lugar. Encontre novidades, explore as categorias e fale com nosso suporte.</p>
-    <div class="actions"><a class="primary" href="#categorias">Explorar catálogo&nbsp; →</a><a class="secondary" href="#suporte">Falar com suporte</a></div>
-   </div>
-   <div class="hero-art"><div class="orb">🎮</div><span class="float f1">⚡</span><span class="float f2">☁️</span><span class="float f3">💎</span><span class="float f4">🎧</span></div>
-  </div>
- </section>
- <div class="trust">
-  <div class="trust-item"><span class="trust-icon">🛡️</span><div><strong>Compra com segurança</strong><small>Atendimento transparente</small></div></div>
-  <div class="trust-item"><span class="trust-icon">⚡</span><div><strong>Agilidade no atendimento</strong><small>Suporte para suas dúvidas</small></div></div>
-  <div class="trust-item"><span class="trust-icon">🎧</span><div><strong>Suporte especializado</strong><small>Estamos aqui para ajudar</small></div></div>
-  <div class="trust-item"><span class="trust-icon">💎</span><div><strong>Qualidade em primeiro lugar</strong><small>Produtos legítimos</small></div></div>
- </div>
- <section id="categorias">
-  <div class="section-head"><div><div class="kicker">Explore a loja</div><h2>Compre por categoria</h2></div><span class="muted">Escolha o que procura</span></div>
-  <div class="category-grid" id="categoryGrid">
-   <button class="category-card" data-cat="IA's"><span class="emoji">🤖</span><strong>IA's</strong><small>Ferramentas inteligentes</small></button>
-   <button class="category-card" data-cat="Edição"><span class="emoji">🎬</span><strong>Edição</strong><small>Criação e conteúdo</small></button>
-   <button class="category-card" data-cat="Assinaturas"><span class="emoji">💎</span><strong>Assinaturas</strong><small>Serviços digitais</small></button>
-   <button class="category-card" data-cat="Steam"><span class="emoji">🕹️</span><strong>Produtos Steam</strong><small>Universo gamer</small></button>
-   <button class="category-card" data-cat="Jogos"><span class="emoji">🎮</span><strong>Contas e jogos</strong><small>Jogos digitais</small></button>
-   <button class="category-card" data-cat="Utilidades"><span class="emoji">🧰</span><strong>Utilidades</strong><small>Praticidade digital</small></button>
-  </div>
- </section>
- <section id="destaques">
-  <div class="section-head"><div><div class="kicker">Vitrines da Ponto Braz</div><h2>Descubra nossas coleções</h2></div><a class="textlink" href="#categorias">Ver categorias →</a></div>
-  <div class="feature-grid" id="featureGrid">
-   <article class="feature" data-search="ia inteligencia artificial"><div class="feature-art">🤖</div><div class="feature-body"><small>IA'S</small><h3>Inteligência artificial</h3><p>Ferramentas digitais para criar, aprender e produzir mais.</p></div></article>
-   <article class="feature" data-search="jogos steam gamer"><div class="feature-art">🎮</div><div class="feature-body"><small>GAMES</small><h3>Área gamer</h3><p>Explore conteúdos e novidades do mundo dos jogos.</p></div></article>
-   <article class="feature" data-search="assinaturas utilidades packs"><div class="feature-art">💠</div><div class="feature-body"><small>ASSINATURAS E PACKS</small><h3>Seu mundo digital</h3><p>Uma seleção de soluções digitais para o seu dia a dia.</p></div></article>
-  </div>
- </section>
- <section>
-  <div class="combo"><div><span class="eyebrow"><i class="dot"></i> NOVIDADES EM BREVE</span><h2>Ofertas e combos especiais</h2><p>Estamos preparando coleções e ofertas para você. Os produtos, valores e condições serão publicados aqui assim que estiverem confirmados.</p></div><div class="combo-mark">🎁</div></div>
- </section>
- <section>
-  <div class="section-head"><div><div class="kicker">Simples e prático</div><h2>Como comprar</h2></div></div>
-  <div class="how-grid"><article class="how"><b>01</b><h3>Escolha o produto</h3><p>Navegue pelas categorias e confira as informações de cada item.</p></article><article class="how"><b>02</b><h3>Confirme os detalhes</h3><p>Consulte disponibilidade, preço e condições antes de pagar.</p></article><article class="how"><b>03</b><h3>Receba o atendimento</h3><p>Nosso suporte orientará os próximos passos do seu pedido.</p></article></div>
- </section>
- <section>
-  <div class="section-head"><div><div class="kicker">Opiniões verdadeiras</div><h2>Avaliações de clientes</h2></div></div>
-  <div class="review-empty"><strong>⭐ Avaliações em breve</strong>As avaliações serão exibidas aqui após compras reais e autorizadas.</div>
- </section>
+<header class="top"><a class="brand" href="#"><span class="mark">PB</span><span>PONTO <b>BRAZ</b><small>SUA LOJA DIGITAL</small></span></a><a class="cart" href="#catalogo">Ver produtos <span>→</span></a></header>
+<main>
+<section class="hero">
+ <div class="hero-copy"><p class="eyebrow">SUA LOJA DIGITAL</p><h1>Tudo o que você precisa,<br><em>em um só lugar.</em></h1><p>Produtos digitais, praticidade e atendimento em um só lugar.</p><a class="cta" href="#categorias">Explorar a loja <span>↗</span></a><div class="trust"><span>✦ Compra segura</span><span>✦ Pix disponível após configuração</span></div></div>
+ <div class="hero-art"><img src="/ponto-braz-banner.png" alt="Identidade visual Ponto Braz"></div>
+</section>
+<section id="categorias" class="section"><div class="section-head"><div><p class="eyebrow">ENCONTRE O QUE PROCURA</p><h2>Nossas categorias</h2></div></div>
+<div class="categories">
+<a href="#catalogo" data-filter="Filmes e séries">🎬<b>Filmes e séries</b></a><a href="#catalogo" data-filter="Jogos">🎮<b>Jogos</b></a><a href="#catalogo" data-filter="Redes sociais">📱<b>Redes sociais</b></a><a href="#catalogo" data-filter="Cursos e métodos">🎓<b>Cursos e métodos</b></a><a href="#catalogo" data-filter="Utilidades">🧰<b>Utilidades</b></a><a href="#catalogo" data-filter="VIP">💎<b>Área VIP</b></a>
+</div></section>
+<section id="catalogo" class="section"><div class="section-head"><div><p class="eyebrow">CATÁLOGO</p><h2>Produtos digitais</h2><p class="muted">Novidades serão adicionadas após aprovação dos fornecedores.</p></div><button id="all" class="textbtn">Ver todos</button></div>
+<div id="products" class="products"><article class="empty"><span>✨</span><h3>Estamos preparando o catálogo</h3><p>Os produtos autorizados aparecerão aqui assim que os fornecedores aprovarem a Ponto Braz.</p></article></div>
+</section>
+<section class="benefits"><div><span>⚡</span><b>Entrega digital</b><small>Automação será ativada após integração.</small></div><div><span>🔒</span><b>Compra protegida</b><small>Pagamento seguro após configuração.</small></div><div><span>💬</span><b>Atendimento</b><small>Suporte para suas compras.</small></div></section>
 </main>
-<footer id="suporte"><div class="wrap">
- <div class="foot"><div><a class="brand" href="#"><span class="brand-mark">🛒</span><b>PONTO BRAZ</b></a><p>Sua loja digital. Tecnologia, jogos e praticidade em um só lugar.</p></div>
- <div><h4>Institucional</h4><div class="footlinks"><a href="#categorias">Categorias</a><a href="#destaques">Destaques</a><a href="#suporte">Atendimento</a></div></div>
- <div><h4>Atendimento</h4><div class="footlinks"><a href="mailto:contato@pontobraz.com.br">E-mail: cadastre seu contato</a><span class="muted">WhatsApp: configure seu número</span><span class="muted">Horário: informe seus horários</span></div></div></div>
- <div class="copyright"><span>© <span id="year"></span> Ponto Braz. Todos os direitos reservados.</span><span>Compre com atenção: confira os dados do vendedor e do produto antes de pagar.</span></div>
-</div></footer>
-<div class="drawer-backdrop" id="backdrop"></div><aside class="drawer" id="drawer" aria-label="Carrinho de compras">
- <div class="drawer-head"><h3>Seu carrinho</h3><button class="close" id="closeCart">Fechar ✕</button></div>
- <div class="cart-items" id="cartItems"><p class="muted">Seu carrinho está vazio.</p></div>
- <div class="cart-total"><strong id="cartTotal">Total: R$ 0,00</strong><p>Esta versão é um modelo visual. O checkout e o pagamento ainda precisam de integração segura antes de receber pedidos.</p><button class="primary" style="width:100%;opacity:.65;cursor:not-allowed" disabled>Checkout em configuração</button></div>
-</aside><div class="toast" id="toast"></div>
-<script>
-const $=s=>document.querySelector(s);
-let active='Todas',cart=[];
-const toast=(msg)=>{const t=$('#toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2200)};
-function choose(cat){active=cat;document.querySelectorAll('.cat').forEach(b=>b.classList.toggle('active',b.dataset.cat===cat));$('#search').value='';filterCards('')}
-function filterCards(q){const term=q.toLowerCase();document.querySelectorAll('.feature').forEach(el=>{const txt=(el.dataset.search+' '+el.innerText).toLowerCase();el.style.display=(!term||txt.includes(term))?'':'none'});if(term)document.querySelector('#destaques').scrollIntoView({behavior:'smooth',block:'start'})}
-document.querySelectorAll('[data-cat]').forEach(el=>el.addEventListener('click',()=>choose(el.dataset.cat)));
-$('#search').addEventListener('input',e=>filterCards(e.target.value));
-function openCart(){ $('#drawer').classList.add('open');$('#backdrop').classList.add('open')}
-function closeCart(){ $('#drawer').classList.remove('open');$('#backdrop').classList.remove('open')}
-$('#openCart').onclick=openCart;$('#closeCart').onclick=closeCart;$('#backdrop').onclick=closeCart;
-$('#cartCount').textContent=cart.length;$('#year').textContent=new Date().getFullYear();
-</script>
+<footer><a class="brand" href="#"><span class="mark">PB</span><span>PONTO <b>BRAZ</b><small>SUA LOJA DIGITAL</small></span></a><p>© <span id="year"></span> Ponto Braz. Todos os direitos reservados.</p><small>Loja em preparação. Produtos, pagamentos e entregas serão habilitados após validação dos parceiros.</small></footer>
+<script src="/app.js"></script>
 </body></html>
