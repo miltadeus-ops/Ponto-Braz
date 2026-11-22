@@ -1,27 +1,81 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#080b2a"><meta name="description" content="Ponto Braz — sua loja digital.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ponto Braz | Loja Digital</title>
-<link rel="stylesheet" href="/style.css">
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:linear-gradient(145deg,#08091d,#17104a,#071b35);color:white}
+header{padding:18px;background:#100d30;border-bottom:1px solid #6552b9}
+.wrap{max-width:1050px;margin:auto;padding:18px}
+.brand{font-size:26px;font-weight:900}
+.brand span{color:#35dfff}
+.hero{margin:25px 0;padding:35px;border-radius:22px;background:linear-gradient(120deg,#5428a8,#086c9e)}
+.hero h1{font-size:38px;margin:10px 0}
+.hero p{line-height:1.6}
+button{cursor:pointer;border:0;border-radius:10px;padding:13px 18px;background:linear-gradient(90deg,#8848e8,#078dbb);color:white;font-weight:bold}
+.search{width:100%;padding:14px;border-radius:10px;border:1px solid #555;background:#171b3d;color:white;margin:15px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:15px}
+.card{padding:20px;border-radius:16px;background:#171c3c;border:1px solid #424b80}
+.emoji{font-size:35px}
+.card p{color:#c2c9e9;line-height:1.5}
+.price{color:#6eeaff;font-weight:bold;margin:15px 0}
+.info{margin-top:30px;padding:22px;background:#151b38;border-radius:16px;line-height:1.6}
+footer{text-align:center;padding:30px;color:#aeb5d4}
+</style>
 </head>
 <body>
-<header class="top"><a class="brand" href="#"><span class="mark">PB</span><span>PONTO <b>BRAZ</b><small>SUA LOJA DIGITAL</small></span></a><a class="cart" href="#catalogo">Ver produtos <span>→</span></a></header>
-<main>
+<header>
+<div class="wrap">
+<div class="brand">🛒 PONTO <span>BRAZ</span></div>
+<small>Sua loja digital</small>
+</div>
+</header>
+<main class="wrap">
 <section class="hero">
- <div class="hero-copy"><p class="eyebrow">SUA LOJA DIGITAL</p><h1>Tudo o que você precisa,<br><em>em um só lugar.</em></h1><p>Produtos digitais, praticidade e atendimento em um só lugar.</p><a class="cta" href="#categorias">Explorar a loja <span>↗</span></a><div class="trust"><span>✦ Compra segura</span><span>✦ Pix disponível após configuração</span></div></div>
- <div class="hero-art"><img src="/ponto-braz-banner.png" alt="Identidade visual Ponto Braz"></div>
+<h1>Seu mundo digital em um só lugar!</h1>
+<p>Bem-vindo à Ponto Braz. Encontre produtos e serviços digitais em um só lugar.</p>
+<button onclick="document.getElementById('catalogo').scrollIntoView({behavior:'smooth'})">VER PRODUTOS</button>
 </section>
-<section id="categorias" class="section"><div class="section-head"><div><p class="eyebrow">ENCONTRE O QUE PROCURA</p><h2>Nossas categorias</h2></div></div>
-<div class="categories">
-<a href="#catalogo" data-filter="Filmes e séries">🎬<b>Filmes e séries</b></a><a href="#catalogo" data-filter="Jogos">🎮<b>Jogos</b></a><a href="#catalogo" data-filter="Redes sociais">📱<b>Redes sociais</b></a><a href="#catalogo" data-filter="Cursos e métodos">🎓<b>Cursos e métodos</b></a><a href="#catalogo" data-filter="Utilidades">🧰<b>Utilidades</b></a><a href="#catalogo" data-filter="VIP">💎<b>Área VIP</b></a>
-</div></section>
-<section id="catalogo" class="section"><div class="section-head"><div><p class="eyebrow">CATÁLOGO</p><h2>Produtos digitais</h2><p class="muted">Novidades serão adicionadas após aprovação dos fornecedores.</p></div><button id="all" class="textbtn">Ver todos</button></div>
-<div id="products" class="products"><article class="empty"><span>✨</span><h3>Estamos preparando o catálogo</h3><p>Os produtos autorizados aparecerão aqui assim que os fornecedores aprovarem a Ponto Braz.</p></article></div>
+<section id="catalogo">
+<h2>✨ Nosso catálogo</h2>
+<input class="search" id="busca" placeholder="Pesquisar produtos..." oninput="render()">
+<div class="grid" id="produtos"></div>
 </section>
-<section class="benefits"><div><span>⚡</span><b>Entrega digital</b><small>Automação será ativada após integração.</small></div><div><span>🔒</span><b>Compra protegida</b><small>Pagamento seguro após configuração.</small></div><div><span>💬</span><b>Atendimento</b><small>Suporte para suas compras.</small></div></section>
+<section class="info">
+<h2>🔒 Como comprar</h2>
+<p>Escolha seu produto e clique em Tenho interesse. Nossa equipe confirmará a disponibilidade e os detalhes do pagamento.</p>
+<p>Não envie senhas ou dados pessoais desnecessários.</p>
+</section>
 </main>
-<footer><a class="brand" href="#"><span class="mark">PB</span><span>PONTO <b>BRAZ</b><small>SUA LOJA DIGITAL</small></span></a><p>© <span id="year"></span> Ponto Braz. Todos os direitos reservados.</p><small>Loja em preparação. Produtos, pagamentos e entregas serão habilitados após validação dos parceiros.</small></footer>
-<script src="/app.js"></script>
-</body></html>
+<footer>© 2026 Ponto Braz · Loja Digital</footer>
+<script>
+const produtos=[
+["🎮","Cartões-presente","Créditos e cartões digitais autorizados."],
+["📚","E-books","Materiais digitais com licença de distribuição."],
+["🎓","Cursos digitais","Cursos e conteúdos autorizados."],
+["📱","Artes para redes sociais","Criação de artes e capas."],
+["🧰","Ferramentas digitais","Serviços digitais sob consulta."],
+["👑","Atendimento VIP","Atendimento prioritário."]
+];
+function render(){
+const q=document.getElementById("busca").value.toLowerCase();
+document.getElementById("produtos").innerHTML=produtos.filter(p=>p.join(" ").toLowerCase().includes(q)).map(p=>`
+<div class="card">
+<div class="emoji">${p[0]}</div>
+<h3>${p[1]}</h3>
+<p>${p[2]}</p>
+<div class="price">Consulte o preço</div>
+<button onclick="pedido('${p[1]}')">Tenho interesse</button>
+</div>`).join("");
+}
+function pedido(produto){
+const mensagem="Olá! Tenho interesse em "+produto+" na Ponto Braz. Gostaria de saber disponibilidade e preço.";
+window.open("https://wa.me/5571984708349?text="+encodeURIComponent(mensagem),"_blank");
+}
+render();
+</script>
+</body>
+</html>
